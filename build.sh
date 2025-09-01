@@ -5,7 +5,7 @@ git clone https://github.com/muzei/muzei.git input
 cd input
 cp ../keystore.properties ./keystore.properties
 cp ../local.properties ./local.properties
-./gradlew :main:build
+./gradlew :main:assembleDebug :main:assembleRelease
 mkdir ../outputdebugmain
 mkdir ../outputreleasemain
 cp main/app/build/outputs/apk/debug/*.apk ../outputdebugmain
