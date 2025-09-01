@@ -11,8 +11,6 @@ jobs:
     permissions: write-all
     steps:
     - uses: actions/checkout@v3
-    - name: Set ANDROID_HOME (if needed)
-      run: echo "$ANDROID_HOME"
     - name: Prepare environment
       run: |
         sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
