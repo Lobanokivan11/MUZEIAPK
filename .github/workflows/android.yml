@@ -47,3 +47,11 @@ jobs:
         overwrite: true
         body: "MUZEI Release Synced With MUZEI SOURCE CODE"
         file_glob: true
+    - name: Actions Ntfy
+      run: |
+        curl \
+        -u ${{ secrets.NTFY_CRED }} \
+        -H "Title: MUZEI IS UPDATED" \
+        -H "Content-Type: text/plain" \
+        -d $'Repo: ${{ github.repository }}\nCommit: ${{ github.sha }}\nRef: ${{ github.ref }}\nStatus: ${{ job.status}}' \
+        ${{ secrets.NTFY_URL }}
