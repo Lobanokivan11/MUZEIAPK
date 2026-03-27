@@ -1,7 +1,7 @@
 sudo apt update
 sudo apt install git git-lfs zipalign apksigner
 git lfs install
-git clone https://github.com/muzei/muzei.git input
+git clone https://github.com/Lobanokivan11/muzei.git input
 cd input
 cp ../keystore.properties ./keystore.properties
 cp ../local.properties ./local.properties
